@@ -1,8 +1,14 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
   // Слайдер блога
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav');
   const formInput= document.querySelectorAll('.form__input');
   const telSelector = document.querySelector('.form__input--tel');
+  const navItem = document.querySelectorAll('.nav__item--submenu');
+  
+  const hero = document.querySelector('#hero');
+  const header = document.querySelector('.header');
   console.log(telSelector)
   
   //Не пустой input 
@@ -112,8 +118,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   
   
 
-  const hero = document.querySelector('#hero');
-  const header = document.querySelector('.header');
   
   // Фиксирование header-a 
     function headerFixed(){
@@ -167,8 +171,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
  // Меню
 
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav');
+
 
   burger.addEventListener('click', ()=>{
     if(!nav.classList.contains('nav--active')){
@@ -188,7 +191,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
   // Подменю на мобиках 
-  const navItem = document.querySelectorAll('.nav__item--submenu');
+
   navItem.forEach((element)=>{
     element.addEventListener('click', (e)=>{
       if(window.innerWidth < 1025){
