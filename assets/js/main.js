@@ -144,10 +144,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }
     }
     function menuClose(){
-      nav.classList.remove('nav--active');
-      burger.classList.remove('burger--active');
-      header.classList.remove('header-m--white');
-      document.body.classList.remove('no-scroll')
+     
     }
     function scroll(){
       window.addEventListener('scroll', ()=>{
@@ -160,13 +157,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
       benefitsSlider();
       benefitsSlider();
       if(window.innerWidth > 1025){
-        menuClose()
+        nav.classList.remove('nav--active');
+      burger.classList.remove('burger--active');
+      header.classList.remove('header-m--white');
+      document.body.classList.remove('no-scroll')
       }
     })
     headerFixed();
     scroll();
     if(window.innerWidth > 1025){
-      menuClose()
+      nav.classList.remove('nav--active');
+      burger.classList.remove('burger--active');
+      header.classList.remove('header-m--white');
+      document.body.classList.remove('no-scroll')
     }
 
  // Меню
@@ -183,7 +186,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       nav.classList.remove('nav--active');
       burger.classList.remove('burger--active');
       header.classList.remove('header-m--white');
-      document.body.classList.remove('no-scroll')
+      document.body.classList.remove('no-scroll');
     }
   });
 
