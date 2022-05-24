@@ -6,10 +6,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const formInput= document.querySelectorAll('.form__input');
   const telSelector = document.querySelector('.form__input--tel');
   const navItem = document.querySelectorAll('.nav__item--submenu');
-  
   const hero = document.querySelector('#hero');
   const header = document.querySelector('.header');
-  console.log(telSelector)
+
   
   //Не пустой input 
   formInput.forEach((element)=>{
@@ -158,9 +157,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
       benefitsSlider();
       if(window.innerWidth > 1025){
         nav.classList.remove('nav--active');
-      burger.classList.remove('burger--active');
-      header.classList.remove('header-m--white');
-      document.body.classList.remove('no-scroll')
+        burger.classList.remove('burger--active');
+        header.classList.remove('header-m--white');
+        document.body.classList.remove('no-scroll')
       }
     })
     headerFixed();
@@ -173,8 +172,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
  // Меню
-
-
 
   burger.addEventListener('click', ()=>{
     if(!nav.classList.contains('nav--active')){
@@ -189,9 +186,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
       document.body.classList.remove('no-scroll');
     }
   });
-
-  
-
 
   // Подменю на мобиках 
 
@@ -240,21 +234,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const modalOpen = document.querySelector('[data-modal]');
   const modalClose = document.querySelector('.modal__close');
 
-  modalOpen.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modal--open');
-    document.body.classList.add('no-scroll');
-  })
-  modalClose.addEventListener('click', ()=>{
-    modal.classList.remove('modal--open');
-    document.body.classList.remove('no-scroll');
-  })
-  modal.addEventListener('click', (e)=>{
-    let self = e.target
-    if(self.classList.contains('modal')){
+  if (modalOpen) {
+    modalOpen.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('modal--open');
+      document.body.classList.add('no-scroll');
+    })
+  }
+  if (modalClose) {
+    modalClose.addEventListener('click', () => {
       modal.classList.remove('modal--open');
       document.body.classList.remove('no-scroll');
-    }
-  })
+    }) 
+  }
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      let self = e.target
+      if (self.classList.contains('modal')) {
+        modal.classList.remove('modal--open');
+        document.body.classList.remove('no-scroll');
+      }
+    }) 
+  }
+  
+  
+  
 
 });
