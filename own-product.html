@@ -7,9 +7,7 @@
 <link rel="stylesheet" href="assets/css/reset.min.css">
 <link rel="stylesheet" href="assets/css/style.min.css">
 <link rel="stylesheet" href="assets/css/fonts.min.css">
-<link rel="stylesheet" href="assets/css/swiper.min.css">
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=672f2446-1823-4c12-a1f0-d00366d56510"></script>
-
+<script src="assets/js/lazyload.js"></script>
   <title>Собственные торговые марки</title>
 </head>
 <body>
@@ -154,7 +152,7 @@
   <div class="offer__inner">
     <div class="container offer__container">
       <div class="offer__image">
-        <img src="assets/images/offer-img.webp" alt="">
+        <img class="lozad" data-src="assets/images/offer-img.webp" alt="">
       </div>
       <div class="offer__content">
         <div class="section-head">
@@ -319,9 +317,6 @@
 </footer>
   </div>
   
-
-
-<script src="assets/js/swiper.js"></script>
 <script src="assets/js/validate.js"></script>
 <script src="assets/js/inputmask.js"></script>
 <script src="assets/js/main.js"></script>
